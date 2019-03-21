@@ -1,0 +1,33 @@
+{
+  "name": "demux-cli",
+  "version": "1.0.0",
+  "author": {
+    "name": "block.one",
+    "url": "https://block.one/"
+  },
+  "bin": {
+    "demux": "bin/demux-cli.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "find-up": "^3.0.0",
+    "minimist": "^1.2.0",
+    "natural-orderby": "^2.0.1",
+    "npm": "^6.7.0",
+    "yeoman-environment": "^2.3.4",
+    "yeoman-generator": "^3.2.0",
+    "yo": "^2.0.5"
+  },
+  "scripts": {
+    "demux": "node bin/create-demux.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@blockone/eslint-config-blockone": "^1.1.1",
+    "eslint": "^5.15.1"
+  },
+  "contributors": [
+    "Julien Heller",
+    "Eddie Sheffield"
+  ]
+}

@@ -1,0 +1,27 @@
+/**
+ * This exports the HandlerVersion, which contains this version's Updaters and Effects.
+ *
+ * You should only need to change this file if you have changed the name of your HandlerVersion.
+ */
+
+import { HandlerVersion } from 'demux'
+<% if (hasUpdaters) { -%>
+import { updaters } from './updaters'
+<% } -%>
+<% if (hasEffects) { -%>
+import { effects } from './effects'
+<% } -%>
+
+export const <%= handlerVersion %>: HandlerVersion = {
+  versionName: '<%= handlerVersion %>',
+<% if (hasUpdaters) { -%>
+  updaters,
+<% } else { -%>
+  updaters: [],
+<% } -%>
+<% if (hasEffects) { -%>
+  effects,
+<% } else { -%>
+  effects: [],
+<% } -%>
+}

@@ -1,0 +1,34 @@
+# Intellij and idea based editors
+.idea
+
+# VS Code
+.vscode/*
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# NPM + Yarn Related
+.npm
+*.tgz
+package-lock.json
+.yarn-integrity
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+my-demux/

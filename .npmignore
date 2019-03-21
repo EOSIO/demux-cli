@@ -1,0 +1,7 @@
+*
+
+!src/**
+!yarn.lock
+!LICENSE
+!README.md
+!bin/**
