@@ -1,4 +1,4 @@
-# demux-cli
+# demux-cli ![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
 
 CLI tool for starting, developing, and interacting with [demux-js](https://github.com/EOSIO/demux-js) projects.
 
