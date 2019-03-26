@@ -5,16 +5,14 @@
  */
 
 import { Migration, MigrationSequence } from 'demux-postgres'
-import * as dbConfig from '../../dbConfig.json'
-
-const cwd = process.cwd()
+import * as dbConfig from '../../config/dbConfig.json'
 
 export const init: MigrationSequence = [
   // MIGRATIONS START
   new Migration(
     '0000-migration',
     dbConfig.schema,
-    `${cwd}/0000-migration.sql`
+    `${__dirname}/0000-migration.sql`
   ),
   // MIGRATIONS END
 ]
