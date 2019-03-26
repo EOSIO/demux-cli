@@ -241,7 +241,7 @@ class InitGenerator extends Generator {
       deps.typesMassive,
     ]
 
-    if (this.answers.reader === 'MongoActionReader' || this.answers.reader === 'NodeosActionReader') {
+    if (['MongoActionReader', 'NodeosActionReader'].contains(this.answers.reader)) {
       dependencies.push(deps.demuxEos)
     }
     if (this.answers.handler === 'MassiveActionHandler') {
