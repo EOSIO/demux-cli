@@ -11,7 +11,6 @@ const promisifiedLoad = () => new Promise((resolve, reject) => {
 })
 
 const promisifiedInstall = modules => new Promise((resolve, reject) => {
-  npm.config.set('save-exact', true)
   npm.commands.install(modules, (err, data) => {
     if (err) {
       console.error(err)
@@ -24,6 +23,7 @@ const promisifiedInstall = modules => new Promise((resolve, reject) => {
 const installModules = async (modules, saveDev = false) => {
   await promisifiedLoad()
   npm.config.set('save-dev', saveDev)
+  npm.config.set('save-exact', true)
   await promisifiedInstall(modules)
 }
 
