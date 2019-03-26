@@ -17,7 +17,7 @@ const init = async () => {
   const actionReader = new <%= reader %>({
 <% if (reader === 'MongoActionReader') { -%>
     mongoEndpoint: mongoConfig.host, // the endpoint that Mongodb is running at
-    dbName: mongoConfig.dbName // the database name the Mongodb plugin was configured to use
+    dbName: mongoConfig.dbName, // the database name the Mongodb plugin was configured to use
 <% } else if (reader === 'NodeosActionReader') { -%>
     nodeosEndpoint: demuxConfig.nodeosEndpoint, // the endpoint for the nodeos RPC api
 <% } -%>
