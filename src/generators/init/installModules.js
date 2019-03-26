@@ -11,6 +11,7 @@ const promisifiedLoad = () => new Promise((resolve, reject) => {
 })
 
 const promisifiedInstall = modules => new Promise((resolve, reject) => {
+  npm.config.set('save-exact', true)
   npm.commands.install(modules, (err, data) => {
     if (err) {
       console.error(err)
