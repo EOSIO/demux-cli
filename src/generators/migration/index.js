@@ -23,8 +23,7 @@ class MigrationGenerator extends Generator {
     this.loadArgs()
     const migrationSequencesExist = allExists([this.destinationPath(path.join('migrationSequences', 'index.ts'))])
     if (!migrationSequencesExist) {
-      // eslint-disable-next-line quotes
-      this.env.error(`This Demux project does not appear to use migrations.`)
+      this.env.error('This Demux project does not appear to use migrations.')
     }
     this.migrationSequences = this.getMigrationSequences()
   }
