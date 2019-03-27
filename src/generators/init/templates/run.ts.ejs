@@ -14,18 +14,16 @@ import { handlerVersions } from './handlerVersions'
 
 // An async init is created and then called to allow for `await`ing the setup code
 const init = async () => {
-  const actionReader = new <%= reader %>(
+  const actionReader = new <%= reader %>({
 <% if (reader === 'MongoActionReader') { -%>
-    mongoConfig.host, // the endpoint that Mongodb is running at
+    mongoEndpoint: mongoConfig.host, // the endpoint that Mongodb is running at
+    dbName: mongoConfig.dbName, // the database name the Mongodb plugin was configured to use
 <% } else if (reader === 'NodeosActionReader') { -%>
-    demuxConfig.nodeosEndpoint, // the endpoint for the nodeos RPC api
+    nodeosEndpoint: demuxConfig.nodeosEndpoint, // the endpoint for the nodeos RPC api
 <% } -%>
-    demuxConfig.startAtBlock, // The block to begin indexing at. For values less than 1, this switches to a "tail" mode, where we start at an offset of the most recent blocks.
-    demuxConfig.onlyIrreversible, // if true, only blocks that have already reached irreversibility will be handled
-<% if (reader === 'MongoActionReader') { -%>
-    mongoConfig.dbName // the database name the Mongodb plugin was configured to use
-<% } -%>
-  )
+    startAtBlock: demuxConfig.startAtBlock, // The block to begin indexing at. For values less than 1, this switches to a "tail" mode, where we start at an offset of the most recent blocks.
+    onlyIrreversible: demuxConfig.onlyIrreversible, // if true, only blocks that have already reached irreversibility will be handled
+  })
 
 <% if (handler === 'MassiveActionHandler') { -%>
   const massiveInstance = await massive(dbConfig)

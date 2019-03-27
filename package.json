@@ -1,6 +1,6 @@
 {
   "name": "demux-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
@@ -28,6 +28,7 @@
   },
   "contributors": [
     "Julien Heller",
-    "Eddie Sheffield"
+    "Eddie Sheffield",
+    "Tara Tritt"
   ]
 }

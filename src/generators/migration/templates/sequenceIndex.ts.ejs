@@ -7,12 +7,12 @@
 import { Migration } from 'demux-postgres'
 import * as dbConfig from '../../config/dbConfig.json'
 
-export const init: Migration[] = [
+export const <%= migrationSequence %>: Migration[] = [
   // MIGRATIONS START
   new Migration(
-    '0000-migration',
+    '<%= migrationName %>',
     dbConfig.schema,
-    `${__dirname}/0000-migration.sql`
+    `${__dirname}/<%= migrationName %>.sql`
   ),
   // MIGRATIONS END
 ]

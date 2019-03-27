@@ -198,7 +198,7 @@ class InitGenerator extends Generator {
       await this.copyToSameDir([
         path.join('migrationSequences', 'index.ts'),
         path.join('migrationSequences', 'init', 'index.ts'),
-        path.join('migrationSequences', 'init', '0000-migration.sql.example'),
+        path.join('migrationSequences', 'init', '0000-migration.sql'),
       ])
 
       this.fs.write(
@@ -211,6 +211,8 @@ class InitGenerator extends Generator {
       this.destinationPath(path.join('config', 'demuxConfig.json')),
       JSON.stringify(
         {
+          // Conditionally add nodeosEndpoint if it exists
+          ...this.answers.nodeosReaderEndpoint && { nodeosEndpoint: this.answers.nodeosReaderEndpoint },
           startAtBlock: this.answers.startAtBlock,
           onlyIrreversible: this.answers.onlyIrreversible,
           pollInterval: this.answers.pollInterval,
@@ -239,7 +241,7 @@ class InitGenerator extends Generator {
       deps.typesMassive,
     ]
 
-    if (this.answers.reader === 'MongoActionReader' || this.answers.handler === 'NodeosActionReader') {
+    if (['MongoActionReader', 'NodeosActionReader'].includes(this.answers.reader)) {
       dependencies.push(deps.demuxEos)
     }
     if (this.answers.handler === 'MassiveActionHandler') {

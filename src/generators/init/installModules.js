@@ -23,6 +23,7 @@ const promisifiedInstall = modules => new Promise((resolve, reject) => {
 const installModules = async (modules, saveDev = false) => {
   await promisifiedLoad()
   npm.config.set('save-dev', saveDev)
+  npm.config.set('save-exact', true)
   await promisifiedInstall(modules)
 }
 
