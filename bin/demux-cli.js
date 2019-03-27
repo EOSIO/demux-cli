@@ -26,7 +26,7 @@ Usage:
         If any arguments are omitted, questions will be asked for the needed
         information.
         
-    demux generate [migration] [migration_name] [migration_sequence]
+    demux generate migration [migration_name] [migration_sequence]
         Adds a new migration. automatically wiring all needed exports.
         If any arguments are omitted, questions will be asked for the needed
         information. The command requires that you are using the
