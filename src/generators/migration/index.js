@@ -1,8 +1,8 @@
 const fs = require('fs')
 const Generator = require('yeoman-generator')
 const path = require('path')
-const { orderBy } = require("natural-orderby")
-const { allExists, getCommentIndex, getDirectories } = require("../../utils")
+const { orderBy } = require('natural-orderby')
+const { allExists, getCommentIndex, getDirectories } = require('../../utils')
 
 // Must define methods in a parent class so that they don't automatically run:
 // https://yeoman.io/authoring/running-context.html
