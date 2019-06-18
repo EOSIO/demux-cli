@@ -1,6 +1,6 @@
 {
   "name": "demux-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
@@ -19,7 +19,7 @@
     "yo": "^2.0.5"
   },
   "scripts": {
-    "demux": "node bin/create-demux.js",
+    "demux": "node bin/demux-cli.js",
     "lint": "eslint ."
   },
   "devDependencies": {
