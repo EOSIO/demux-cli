@@ -1,6 +1,6 @@
 {
   "name": "demux-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
@@ -12,19 +12,14 @@
   "dependencies": {
     "find-up": "3.0.0",
     "minimist": "1.2.0",
-    "natural-orderby": "2.0.1",
-    "npm": "6.13.4",
-    "yeoman-environment": "2.3.4",
+    "natural-orderby": "2.0.3",
+    "npm": "6.13.7",
+    "yeoman-environment": "2.8.0",
     "yeoman-generator": "3.2.0",
-    "yo": "2.0.5"
-  },
-  "resolutions": {
-    "https-proxy-agent": "2.2.3",
-    "bin-links": "1.1.6",
-    "mem": "4.0.0"
+    "yo": "2.0.6"
   },
   "scripts": {
-    "demux": "node bin/create-demux.js",
+    "demux": "node bin/demux-cli.js",
     "lint": "eslint ."
   },
   "devDependencies": {
@@ -33,6 +28,9 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0"
+  },
+  "resolutions": {
+    "mem": "^4.0.0"
   },
   "contributors": [
     "Julien Heller",
