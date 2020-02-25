@@ -7,7 +7,7 @@ const dependencies = {
   // Dev Dependencies
   typescript: 'typescript@3.8.2',
   typesMassive: '@types/massive@5.4.3',
-  typesBunyan: '@types/bunyan@1.8.6'
+  typesBunyan: '@types/bunyan@1.8.6',
 }
 
 module.exports = { dependencies }

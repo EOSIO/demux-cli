@@ -239,7 +239,7 @@ class InitGenerator extends Generator {
     const devDependencies = [
       deps.typescript,
       deps.typesMassive,
-      deps.typesBunyan
+      deps.typesBunyan,
     ]
 
     if (['MongoActionReader', 'NodeosActionReader'].includes(this.answers.reader)) {
