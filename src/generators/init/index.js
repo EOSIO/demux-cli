@@ -1,3 +1,4 @@
+/* eslint max-classes-per-file: 0 */
 const Generator = require('yeoman-generator')
 const path = require('path')
 const readers = require('./questions/readers')
@@ -154,19 +155,19 @@ class InitGenerator extends Generator {
   }
 
   async copyToSameDir(paths) {
-    for (const _path of paths) {
-      const extension = _path.substring(_path.lastIndexOf('.') + 1, _path.length)
+    for (const filePath of paths) {
+      const extension = filePath.substring(filePath.lastIndexOf('.') + 1, filePath.length)
       if (extension === 'ejs') {
-        const templatedPath = _path.substring(0, _path.lastIndexOf('.'))
+        const templatedPath = filePath.substring(0, filePath.lastIndexOf('.'))
         this.fs.copyTpl(
-          this.templatePath(_path),
+          this.templatePath(filePath),
           this.destinationPath(templatedPath),
           this.answers,
         )
       } else {
         this.fs.copy(
-          this.templatePath(_path),
-          this.destinationPath(_path),
+          this.templatePath(filePath),
+          this.destinationPath(filePath),
         )
       }
     }

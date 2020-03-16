@@ -1,3 +1,4 @@
+/* eslint max-classes-per-file: 0 */
 const AbstractHandlerGenerator = require('../../AbstractHandlerGenerator')
 
 // Must define methods in a parent class so that they don't automatically run:

@@ -1,3 +1,4 @@
+/* eslint max-classes-per-file: 0 */
 const fs = require('fs')
 const Generator = require('yeoman-generator')
 const path = require('path')
