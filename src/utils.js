@@ -2,8 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 const allExists = (paths) => {
-  for (const _path of paths) {
-    if (!fs.existsSync(_path)) {
+  for (const filePath of paths) {
+    if (!fs.existsSync(filePath)) {
       return false
     }
   }

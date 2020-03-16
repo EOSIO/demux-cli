@@ -20,11 +20,12 @@
   },
   "scripts": {
     "demux": "node bin/demux-cli.js",
-    "lint": "eslint ."
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   },
   "devDependencies": {
     "@blockone/eslint-config-blockone": "^3.0.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "mem": "^4.0.0"
